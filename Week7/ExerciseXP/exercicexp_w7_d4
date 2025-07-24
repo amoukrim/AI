@@ -1,0 +1,720 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPDOgNFXWPApOOUvoNkWNyf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/amoukrim/AI/blob/main/Week7/ExerciseXP/exercicexp_w7_d4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#@Author : Adil MOUKRIM\n",
+        "\n",
+        "# Exercises XP\n",
+        "Last Updated: March 20th, 2025\n",
+        "\n",
+        "👩‍🏫 👩🏿‍🏫 What You’ll learn\n",
+        "In these exercises, you will explore the practical applications, ethical implications, and technical intricacies of generative AI and traditional AI. You will gain hands-on experience in comparative analysis, ethical risk assessments, model fine-tuning, and evaluating generative AI models such as GANs and VAEs.\n",
+        "\n",
+        "\n",
+        "\n",
+        "🛠️ What you will create\n",
+        "Develop a comprehensive understanding of generative AI and its applications.\n",
+        "Identify and mitigate ethical and security risks of AI-generated content.\n",
+        "Optimize AI-generated outputs through prompt engineering and fine-tuning.\n",
+        "Evaluate and compare different generative models based on real-world use cases.\n",
+        "Explore latent space representations and control the variability of generative AI models.\n",
+        "\n",
+        "\n",
+        "🌟 Exercise 1: Comparative Analysis of Generative AI and Traditional AI\n",
+        "The objective is to critically evaluate the strengths and weaknesses of generative AI compared to traditional AI in complex scenarios.\n",
+        "For each of the following real-world scenarios, determine whether generative AI or traditional AI would be more suitable. Provide a detailed justification, considering factors such as accuracy, creativity, efficiency, ethical concerns, and computational costs.\n",
+        "\n",
+        "1. Automated Medical Diagnosis\n",
+        "\n",
+        "A hospital wants to implement an AI system to detect lung cancer from X-ray images. Should they use a traditional AI classification model or a generative AI approach that can synthesize new medical images for training?\n",
+        "2. Legal Document Generation\n",
+        "\n",
+        "A law firm wants an AI system that drafts legally binding contracts with minimal human intervention. Should they use a rule-based system (traditional AI) or a generative AI language model? What are the risks involved?\n",
+        "3. AI-Generated Scientific Research\n",
+        "\n",
+        "A university research team wants to automate literature reviews by summarizing thousands of academic papers and even suggesting new research hypotheses. Would generative AI be the best approach? Why or why not?\n",
+        "4. Financial Market Predictions\n",
+        "\n",
+        "A hedge fund is using AI to predict stock market trends based on historical trading data. Would generative AI be helpful, or should they rely on traditional AI models like regression and time-series forecasting?\n",
+        "5. Autonomous Vehicle Decision-Making\n",
+        "\n",
+        "Self-driving cars need to make real-time driving decisions in unpredictable environments. Could generative AI be useful, or should traditional AI models be preferred? Consider safety and reliability.\n",
+        "\n",
+        "\n",
+        "🌟 Exercise 2: Ethical and Security Risks of Generative AI\n",
+        "Let’s analyze the ethical dilemmas and security risks posed by generative AI in high-stakes applications.\n",
+        "Examine each of the following scenarios and identify at least three risks associated with generative AI. Then, propose two solutions to mitigate these risks.\n",
+        "\n",
+        "1. Deepfake Political Manipulation\n",
+        "\n",
+        "AI-generated deepfake videos are used to spread misinformation about political candidates before an election.\n",
+        "2. Synthetic Identity Fraud\n",
+        "\n",
+        "A cybercriminal uses generative AI to create synthetic identities that pass biometric verification systems (e.g., AI-generated faces, voice cloning).\n",
+        "3. Generative AI in Cyber Warfare\n",
+        "\n",
+        "A nation-state develops an AI that generates realistic but entirely false intelligence reports to mislead foreign governments.\n",
+        "4. AI-Generated Malware\n",
+        "\n",
+        "A hacking group leverages AI to generate novel malware strains that evade traditional cybersecurity detection systems.\n",
+        "5. Copyright and Intellectual Property Theft\n",
+        "\n",
+        "A generative AI model is trained on copyrighted books, art, and music without permission. It generates content that closely resembles existing works, raising legal concerns.\n",
+        "For each scenario, discuss:\n",
+        "\n",
+        "Potential consequences if left unregulated.\n",
+        "Possible regulatory or technological solutions to prevent misuse.\n",
+        "\n",
+        "\n",
+        "🌟 Exercise 3: Optimization and Fine-Tuning of Generative AI Models\n",
+        "Let’s understand how to improve the output of generative AI models through prompt engineering, model fine-tuning, and dataset curation.\n",
+        "\n",
+        "1. Prompt Engineering\n",
+        "\n",
+        "The quality of AI-generated content depends on how well the prompt is structured. Rewrite the following prompts to make them more specific, controlled, and likely to produce high-quality results:\n",
+        "“Generate an image of a futuristic city.”\n",
+        "“Write a poem about the future.”\n",
+        "“Create a song in the style of classical music.”\n",
+        "2. Bias and Fairness in AI Training Data\n",
+        "\n",
+        "A generative AI model trained on news articles from a biased media source consistently generates politically skewed content. How can dataset curation be improved to ensure balanced and unbiased AI-generated text?\n",
+        "3. Fine-Tuning for Domain-Specific Tasks\n",
+        "\n",
+        "A pharmaceutical company wants to fine-tune a generative AI model to generate accurate and reliable medical research papers. What are the key steps required to fine-tune the model? Consider aspects such as:\n",
+        "Data collection and preprocessing\n",
+        "Transfer learning techniques\n",
+        "Evaluation metrics to ensure factual correctness\n",
+        "4. Evaluating Generative AI Performance\n",
+        "\n",
+        "AI-generated images and text are often evaluated based on human perception. What objective quantitative metrics (e.g., BLEU, FID, perplexity) can be used to assess the quality of AI-generated outputs?\n",
+        "5. Controlling AI Creativity and Coherence\n",
+        "\n",
+        "In some cases, generative AI can produce unrealistic or nonsensical outputs. How can temperature scaling, reinforcement learning, and attention mechanisms be used to refine AI creativity while maintaining logical coherence?\n",
+        "\n",
+        "\n",
+        "🌟 Exercise 4: Evaluating the Trade-offs Between GANs and VAEs\n",
+        "Let’s critically analyze the advantages and limitations of Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) in different generative tasks.\n",
+        "For each of the following scenarios, determine whether GANs or VAEs would be the more suitable generative model. Provide a detailed justification, considering aspects such as output quality, interpretability, training stability, and computational efficiency.\n",
+        "\n",
+        "1. Synthetic Medical Image Generation\n",
+        "\n",
+        "A research lab wants to generate synthetic MRI scans to train a machine learning model while ensuring patient privacy. Should they use GANs or VAEs? Why?\n",
+        "2. AI-Assisted Creative Writing\n",
+        "\n",
+        "A publishing company is using AI to generate text for short stories and creative writing. Would the structure of VAEs be more beneficial than GANs? Explain.\n",
+        "3. Anomaly Detection in Financial Transactions\n",
+        "\n",
+        "A bank wants to detect fraudulent transactions by learning a normal pattern of customer purchases and flagging deviations. Would a GAN-based or a VAE-based model be more effective?\n",
+        "4. Generating High-Resolution Fashion Designs\n",
+        "\n",
+        "An e-commerce company wants to create AI-generated fashion designs based on existing styles. Should they rely on GANs for high-quality image generation, or could VAEs be a better option for interpolating between styles?\n",
+        "5. Data Augmentation for Training Autonomous Vehicles\n",
+        "\n",
+        "A self-driving car company needs to generate synthetic training data for various driving conditions. Would GANs or VAEs be more effective in producing realistic road scenarios?\n",
+        "\n",
+        "\n",
+        "🌟 Exercise 5: Advanced Latent Space Exploration in VAEs\n",
+        "Let’s deepen understanding of latent space representation and how it influences the diversity and structure of generated outputs in VAEs.\n",
+        "\n",
+        "1. Visualizing Latent Space Distributions\n",
+        "\n",
+        "Imagine you trained a VAE on handwritten digits (MNIST dataset).\n",
+        "How would you evaluate whether the latent space properly separates different digit classes?\n",
+        "What clustering techniques could you apply to visualize and analyze the learned latent representations?\n",
+        "2. Interpolating Between Two Samples\n",
+        "\n",
+        "Given two images of different handwritten digits (e.g., ‘3’ and ‘8’), describe how you would use the latent space of a trained VAE to smoothly interpolate between them.\n",
+        "Explain why this is possible with VAEs but not with GANs.\n",
+        "3. Controlling the Degree of Variability in Generated Outputs\n",
+        "\n",
+        "In a VAE, how would increasing or decreasing the KL divergence term in the loss function affect the diversity and quality of generated samples?\n",
+        "Discuss a potential real-world application where controlling the degree of variability in the output is essential.\n",
+        "4. Disentangling Latent Representations\n",
+        "\n",
+        "In theory, a well-trained VAE should learn a disentangled latent space where different dimensions correspond to independent features of the data.\n",
+        "Suppose you’re generating human faces with a VAE. How would you modify the latent vector to change only one attribute (e.g., hair color, facial expression) while keeping other features unchanged?\n",
+        "5. Comparing PCA and Variational Autoencoders\n",
+        "\n",
+        "Principal Component Analysis (PCA) is another dimensionality reduction technique.\n",
+        "How does PCA differ from VAEs in terms of:\n",
+        "Linearity vs. Non-linearity\n",
+        "Interpretability of Components\n",
+        "Data Reconstruction Quality\n",
+        "Use in Generative Modeling"
+      ],
+      "metadata": {
+        "id": "4liEjodCjnut"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Exercise 1: Comparative Analysis of Generative AI and Traditional AI"
+      ],
+      "metadata": {
+        "id": "pvbsSgpNayYL"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**1. Question :** A hospital wants to implement an AI system to detect lung cancer from X-ray images. Should they use a traditional AI classification model or a generative AI approach that can synthesize new medical images for training?\n",
+        "\n",
+        "**Réponse** : Diagnostic médical automatisé\n",
+        "Recommandation : IA traditionnelle (modèles de classification comme les CNN)\n",
+        "Justification :\n",
+        "\n",
+        "Précision et fiabilité : Cruciales en santé ; les modèles de classification sont éprouvés et interprétables.\n",
+        "\n",
+        "IA générative pour l’augmentation : Peut soutenir l’entraînement en synthétisant des cas rares, mais pas pour le diagnostic direct.\n",
+        "\n",
+        "Éthique et coût : Risques moindres avec les modèles traditionnels ; les modèles génératifs peuvent inventer des données, ce qui est dangereux."
+      ],
+      "metadata": {
+        "id": "-VekpTO-bAZO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#2. Legal Document Generation\n",
+        "\n",
+        "**Question :** A law firm wants an AI system that drafts legally binding contracts with minimal human intervention. Should they use a rule-based system (traditional AI) or a generative AI language model? What are the risks involved?\n",
+        "**Réponse : ** Recommandation : IA générative (modèles de langage comme GPT)\n",
+        "Justification :\n",
+        "\n",
+        "Créativité et flexibilité : Les modèles de langage excellent dans la génération de texte juridique fluide.\n",
+        "\n",
+        "Risques : Hallucinations, erreurs juridiques, responsabilité légale.\n",
+        "\n",
+        "Atténuation : Supervision humaine, ajustement sur des corpus juridiques."
+      ],
+      "metadata": {
+        "id": "qxMRcxdBbnLv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 3. AI-Generated Scientific Research\n",
+        "\n",
+        "**Question : **A university research team wants to automate literature reviews by summarizing thousands of academic papers and even suggesting new research hypotheses. Would generative AI be the best approach? Why or why not?\n",
+        "\n",
+        "**Réponse : **Recommandation : IA générative\n",
+        "Justification :\n",
+        "\n",
+        "Efficacité : Capable de résumer et synthétiser une grande quantité de littérature.\n",
+        "\n",
+        "Créativité : Utile pour proposer de nouvelles hypothèses.\n",
+        "\n",
+        "Risques : Contenu inventé plausible ; supervision nécessaire."
+      ],
+      "metadata": {
+        "id": "bXCMx1jVcIb5"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 4. Financial Market Predictions\n",
+        "\n",
+        "**Question : **A hedge fund is using AI to predict stock market trends based on historical trading data. Would generative AI be helpful, or should they rely on traditional AI models like regression and time-series forecasting?\n",
+        "\n",
+        "**Réponse : **\n",
+        "Recommandation : IA traditionnelle (séries temporelles, régression)\n",
+        "Justification :\n",
+        "\n",
+        "Précision prédictive : Modèles comme ARIMA ou LSTM sont mieux adaptés aux prévisions structurées.\n",
+        "\n",
+        "IA générative : Peut générer des données plausibles mais peu informatives.\n",
+        "\n",
+        "Risque : Surapprentissage ou génération d’illusions statistiques."
+      ],
+      "metadata": {
+        "id": "2SqGQc0ccjE2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 5. Autonomous Vehicle Decision-Making\n",
+        "\n",
+        "**Question :** Self-driving cars need to make real-time driving decisions in unpredictable environments. Could generative AI be useful, or should traditional AI models be preferred? Consider safety and reliability.\n",
+        "\n",
+        "**Réponse : **\n",
+        "Recommandation : IA traditionnelle (règles + apprentissage par renforcement)\n",
+        "Justification :\n",
+        "\n",
+        "Temps réel : Décisions fiables et explicables requises.\n",
+        "\n",
+        "Sécurité : L’IA générative est imprévisible.\n",
+        "\n",
+        "Utilité de l’IA générative : Pour générer des environnements d’entraînement, pas pour la prise de décision directe.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "vd-RGGIkdLbP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Exercise 2: Ethical and Security Risks of Generative AI"
+      ],
+      "metadata": {
+        "id": "OshhfBtId7zK"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Manipulation politique par deepfake\n",
+        "**Risques :**\n",
+        "\n",
+        "Perte de confiance publique\n",
+        "\n",
+        "Manipulation électorale\n",
+        "\n",
+        "Diffamation ou incitation à la haine\n",
+        "Solutions :\n",
+        "\n",
+        "Filigranes numériques\n",
+        "\n",
+        "Lois sur les contenus falsifiés + systèmes de vérification rapide"
+      ],
+      "metadata": {
+        "id": "4XakQnBJeZgE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##2. Fraude à l’identité synthétique\n",
+        "**Risques :**\n",
+        "\n",
+        "Intrusions dans les systèmes sécurisés\n",
+        "\n",
+        "Délits financiers\n",
+        "\n",
+        "Contournement des contrôles biométriques\n",
+        "Solutions :\n",
+        "\n",
+        "Authentification multi-facteurs\n",
+        "\n",
+        "Détection de vivacité (liveness)"
+      ],
+      "metadata": {
+        "id": "e9MyqEt3ehoV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. IA générative dans la cyberguerre\n",
+        "**Risques :**\n",
+        "\n",
+        "Désinformation militaire\n",
+        "\n",
+        "Déstabilisation diplomatique\n",
+        "\n",
+        "Attribution difficile\n",
+        "\n",
+        "**Solutions :**\n",
+        "\n",
+        "Mécanismes de traçabilité\n",
+        "\n",
+        "Accords internationaux sur l’usage militaire de l’IA"
+      ],
+      "metadata": {
+        "id": "lvZUwQelesT5"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Malware généré par IA\n",
+        "**Risques :**\n",
+        "\n",
+        "Contournement des antivirus\n",
+        "\n",
+        "Création automatique d’attaques inédites\n",
+        "\n",
+        "Évolution rapide des menaces\n",
+        "\n",
+        "**Solutions :**\n",
+        "\n",
+        "Défense basée sur l’IA\n",
+        "\n",
+        "Détection d’anomalies comportementales\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "cohunpHpe7Sb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 5. Vol de propriété intellectuelle :\n",
+        "**Risques :**\n",
+        "\n",
+        "Violations du droit d’auteur\n",
+        "\n",
+        "Concurrence déloyale\n",
+        "\n",
+        "Dévalorisation des œuvres humaines\n",
+        "\n",
+        "**Solutions :**\n",
+        "\n",
+        "Systèmes de licence de données\n",
+        "\n",
+        "Législation sur la transparence des ensembles de données\n"
+      ],
+      "metadata": {
+        "id": "tV2qL-J5fftW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Exercice 3 : Optimisation et ajustement des modèles d’IA générative:\n"
+      ],
+      "metadata": {
+        "id": "bR0gtDm6gDDe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**1. Conception de prompts (Prompt Engineering)**\n",
+        "“Génère une image d'une ville futuriste.” →\n",
+        "“Crée une image haute résolution d’une ville futuriste de nuit, avec des voitures volantes et des néons.”\n",
+        "\n",
+        "“Écris un poème sur le futur.” →\n",
+        "“Écris un poème de quatre strophes en vers libres sur un futur technologique et optimiste où l’homme et l’IA coexistent.”\n",
+        "\n",
+        "“Crée une chanson dans le style classique.” →\n",
+        "“Compose une mélodie instrumentale courte dans le style des symphonies classiques du XVIIIe siècle, pour quatuor à cordes.”\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "7lRpP3zPgXK1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**2. Biais et équité dans les données d'entraînement :**\n",
+        "\n",
+        "**Solutions :**\n",
+        "\n",
+        "Diversifier les sources d’informations\n",
+        "\n",
+        "Utiliser des métriques de biais + techniques de réduction de biais"
+      ],
+      "metadata": {
+        "id": "iFzRnXddgex3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3. Ajustement pour des tâches spécialisées (Fine-tuning)**\n",
+        "\n",
+        "**Étapes clés :**\n",
+        "\n",
+        "Collecte de données : Littérature scientifique validée par des pairs\n",
+        "\n",
+        "Prétraitement : Anonymisation, tokenisation, filtrage\n",
+        "\n",
+        "Apprentissage transféré : Ajustement via LoRA ou adaptateurs\n",
+        "\n",
+        "Évaluation : BLEU pour la qualité, relecture experte, scores de factualité"
+      ],
+      "metadata": {
+        "id": "H55VO4ughM3n"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**4. Évaluation des performances de l’IA générative**\n",
+        "\n",
+        "**Métriques :**\n",
+        "\n",
+        "Texte : BLEU, ROUGE, METEOR, perplexité\n",
+        "\n",
+        "Images : FID (Fréchet Inception Distance), IS\n",
+        "\n",
+        "Général : Évaluation humaine + diversité (ex : self-BLEU)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "iZqo5CN8h7Zv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**5. Contrôle de la créativité et de la cohérence**\n",
+        "\n",
+        "Température : Basse = logique, Haute = créativité\n",
+        "\n",
+        "Apprentissage par renforcement (RLHF) : Réglage basé sur des retours\n",
+        "\n",
+        "**Mécanismes d’attention** : Maintien de la cohérence contextuelle"
+      ],
+      "metadata": {
+        "id": "HyXytMy9iGsO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Exercice 4 : Comparaison entre GANs et VAEs"
+      ],
+      "metadata": {
+        "id": "XYeD22mgiVDn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**1. Visualizing Latent Space Distributions**\n",
+        "\n",
+        "1. Synthetic Medical Image Generation\n",
+        "\n",
+        "A research lab wants to generate synthetic MRI scans to train a machine learning model while ensuring patient privacy. Should they use GANs or VAEs? Why?\n",
+        "\n",
+        "**Réponse :** VAE\n",
+        "\n",
+        "**Raison** : Plus stable, explicable, moins de risques d’artefacts irréalistes"
+      ],
+      "metadata": {
+        "id": "DnClvCQCidJ5"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**2. AI-Assisted Creative Writing**\n",
+        "\n",
+        "A publishing company is using AI to generate text for short stories and creative writing. Would the structure of VAEs be more beneficial than GANs? Explain.\n",
+        "\n",
+        "**Réponse : ** Recommandation : VAE\n",
+        "\n",
+        "**Raison :** Espace latent structuré, favorise la diversité contrôlée du contenu"
+      ],
+      "metadata": {
+        "id": "E55_kCbkjp8X"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "2YFBv8CMjA-f"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3. Anomaly Detection in Financial Transactions**\n",
+        "\n",
+        "A bank wants to detect fraudulent transactions by learning a normal pattern of customer purchases and flagging deviations. Would a GAN-based or a VAE-based model be more effective?\n",
+        "\n",
+        "**Recommandation :** VAE\n",
+        "\n",
+        "**Raison :** Capacité à modéliser le comportement normal, détection des écarts"
+      ],
+      "metadata": {
+        "id": "CD_TSJF4j-iu"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**4. Generating High-Resolution Fashion Designs**\n",
+        "\n",
+        "An e-commerce company wants to create AI-generated fashion designs based on existing styles. Should they rely on GANs for high-quality image generation, or could VAEs be a better option for interpolating between styles?\n",
+        "\n",
+        "**Recommandation :** GAN\n",
+        "\n",
+        "**Raison :** Qualité visuelle supérieure, mieux pour l’usage commercial"
+      ],
+      "metadata": {
+        "id": "jxpQ8nxWkU6W"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**5. Data Augmentation for Training Autonomous Vehicles**\n",
+        "\n",
+        "A self-driving car company needs to generate synthetic training data for various driving conditions. Would GANs or VAEs be more effective in producing realistic road scenarios?\n",
+        "\n",
+        "**Recommandation :** GAN\n",
+        "\n",
+        "**Raison :** Génération réaliste de scénarios routiers complexes\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "wQSLGs_GksAn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Exercise 5: Advanced Latent Space Exploration in VAEs"
+      ],
+      "metadata": {
+        "id": "xiqU3QXSlpHn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**1. Visualizing Latent Space Distributions**\n",
+        "\n",
+        "Imagine you trained a VAE on handwritten digits (MNIST dataset).\n",
+        "How would you evaluate whether the latent space properly separates different digit classes?\n",
+        "What clustering techniques could you apply to visualize and analyze the learned latent representations?\n",
+        "\n",
+        "**Réponse :**\n",
+        "\n",
+        "Utiliser t-SNE, UMAP ou PCA pour projeter l’espace latent\n",
+        "\n",
+        "Appliquer k-means ou DBSCAN pour évaluer les clusters"
+      ],
+      "metadata": {
+        "id": "OZg1h6JblrYn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**2. Interpolating Between Two Samples**\n",
+        "\n",
+        "Given two images of different handwritten digits (e.g., ‘3’ and ‘8’), describe how you would use the latent space of a trained VAE to smoothly interpolate between them.\n",
+        "Explain why this is possible with VAEs but not with GANs.\n",
+        "\n",
+        "**Réponse :**\n",
+        "\n",
+        "\n",
+        "* Encoder deux chiffres → vecteurs latents\n",
+        "\n",
+        "* Interpolation linéaire entre les deux\n",
+        "\n",
+        "*  Décoder les étapes intermédiaires\n",
+        "\n",
+        "**Pourquoi c’est possible avec les VAE ?**\n",
+        "L’espace latent est continu et régularisé. Ce n’est pas le cas avec les GANs.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "5-itlgmWmJdm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3. Controlling the Degree of Variability in Generated Outputs**\n",
+        "\n",
+        "In a VAE, how would increasing or decreasing the KL divergence term in the loss function affect the diversity and quality of generated samples?\n",
+        "Discuss a potential real-world application where controlling the degree of variability in the output is essential.\n",
+        "\n",
+        "**Réponse :**\n",
+        "* Augmenter KL divergence : Plus de diversité, moins de précision\n",
+        "\n",
+        "* Réduire KL divergence : Moins de diversité, meilleure fidélité\n",
+        "Exemple : Design de produits où on veut des variantes contrôlées\n"
+      ],
+      "metadata": {
+        "id": "N9mCzx9mmyEp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**4. Disentangling Latent Representations**\n",
+        "\n",
+        "In theory, a well-trained VAE should learn a disentangled latent space where different dimensions correspond to independent features of the data.\n",
+        "Suppose you’re generating human faces with a VAE. How would you modify the latent vector to change only one attribute (e.g., hair color, facial expression) while keeping other features unchanged?\n",
+        "\n",
+        "**Réponse :**\n",
+        "* Utiliser un β-VAE\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "* Modifier un seul axe du vecteur latent pour changer un attribut (ex : couleur de cheveux)\n"
+      ],
+      "metadata": {
+        "id": "B3pf_RLmnR8v"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**5. Comparing PCA and Variational Autoencoders**\n",
+        "\n",
+        "Principal Component Analysis (PCA) is another dimensionality reduction technique.\n",
+        "How does PCA differ from VAEs in terms of:\n",
+        "Linearity vs. Non-linearity\n",
+        "Interpretability of Components\n",
+        "Data Reconstruction Quality\n",
+        "Use in Generative Modeling\n",
+        "\n",
+        "**Réponse :**\n",
+        "\n",
+        "| Caractéristique           | PCA        | VAE                                |\n",
+        "| ------------------------- | ---------- | ---------------------------------- |\n",
+        "| Linéarité                 | Linéaire   | Non linéaire                       |\n",
+        "| Interprétabilité          | Élevée     | Moins directe mais plus expressive |\n",
+        "| Qualité de reconstruction | Limitée    | Meilleure                          |\n",
+        "| Modélisation générative   | Impossible | Oui, conçu pour cela               |\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "GhGzjUIdn4yf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "V9qpXh1SjiL3"
+      },
+      "outputs": [],
+      "source": []
+    }
+  ]
+}
